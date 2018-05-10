@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
-	//"strings"
+	"strings"
 	"strconv"
 )
 
 func main() {
+
 	//(1)
 	var s string
 	s = "hello wold!"
@@ -40,4 +41,8 @@ func main() {
 	xx:=float64(aa)+bbb
 	fmt.Printf("%v,\n",xx)
 
+	rrr:=[]string{"1","2","3","4"}
+	rrra := strings.Join(rrr," ")
+	fmt.Printf("%v\n",rrra)
 }
+
