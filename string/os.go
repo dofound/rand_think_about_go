@@ -33,5 +33,11 @@ func main() {
 	mm := dd+ggg
 	fmt.Printf("%v,%v\n",m,mm)
 
+	//(5)
+	aa:=10.110
+	bb:="333.110"
+	bbb,_:=strconv.ParseFloat(bb,64)
+	xx:=float64(aa)+bbb
+	fmt.Printf("%v,\n",xx)
 
 }
