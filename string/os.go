@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"strings"
 	"strconv"
+	"unicode/utf8"
 )
 
 func main() {
@@ -41,8 +42,18 @@ func main() {
 	xx:=float64(aa)+bbb
 	fmt.Printf("%v,\n",xx)
 
+	//(6)
 	rrr:=[]string{"1","2","3","4"}
 	rrra := strings.Join(rrr," ")
 	fmt.Printf("%v\n",rrra)
+
+	//(7)
+	mtring:="我来自中国，今年28岁。"
+	menglis:="hi,china!,中国，你好。"
+	m_len:=strings.Count(mtring,"")-1 //here!
+	mm_len:=utf8.RuneCountInString(mtring)
+	m_ab_len:=len([]int32(menglis)) // or rune()
+	fmt.Println(m_len,mm_len,m_ab_len)
+
 }
 
