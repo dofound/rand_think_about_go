@@ -39,8 +39,26 @@ func main() {
 
 	fmt.Println(configPath)
 	if _, err := toml.DecodeFile(configPath, &sysconfig); err != nil {
-		fmt.Printf("%v", err)
+		fmt.Printf("err:%v", err)
 	}
 	fmt.Printf("%v", sysconfig)
+
+	var ptest = `
+	addr = "this is addr"
+	user = "xiao"
+	pass = "jianhe"
+	`
+	type mptest struct {
+		Addr string
+		User string
+		Pass string
+	}
+
+	var pconf mptest
+	_,err := toml.Decode(ptest,&pconf)
+	if err !=nil {
+		fmt.Println("err:%v",err)
+	}
+	fmt.Println(pconf)
 
 }
