@@ -55,9 +55,9 @@ func main() {
 	}
 
 	var pconf mptest
-	_,err := toml.Decode(ptest,&pconf)
-	if err !=nil {
-		fmt.Println("err:%v",err)
+	_, err := toml.Decode(ptest, &pconf)
+	if err != nil {
+		fmt.Println("err:%v", err)
 	}
 	fmt.Println(pconf)
 
