@@ -53,6 +53,9 @@ func main() {
 	m_len:=strings.Count(mtring,"")-1 //here!
 	mm_len:=utf8.RuneCountInString(mtring)
 	m_ab_len:=len([]int32(menglis)) // or rune()
+	m_arr := []rune(mtring) //
+	fmt.Println(len(m_arr))
+
 	fmt.Println(m_len,mm_len,m_ab_len)
 
 }
