@@ -25,11 +25,17 @@ func main() {
 	type redisConf struct {
 		Addr []string `toml:"addr"`
 	}
+	//config array
+	type songConf struct {
+		Name string `toml:"name"`
+		Sex string `toml:"sex"`
+	}
 	type sysConfig struct {
 		Dbconf      dbConf      `toml:"database"`
 		Memconf     memConf     `toml:"memcache"`
 		Serviceconf serviceConf `toml:"service"`
 		Redisconf   redisConf   `toml:"redis"`
+		Songconf    []songConf    `toml:"song"`
 	}
 
 	var sysconfig sysConfig
